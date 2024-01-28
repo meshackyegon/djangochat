@@ -1,0 +1,23 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Chat | {% endblock %}
+
+{% block content %}
+<div class="p-10 lg:p-20 text-center">
+    <h1 class="text-3xl lg:text-6xl text-white">Start chat</h1>
+</div>
+
+<form method="post" action="." class="lg:w-2/4 px-4 mx-auto">
+    {% csrf_token %}
+    <div class="mb-5">
+        <label class="text-black">Ask Messsage</label>
+        <input type="text" name="message" placeholder="Enter the message to start chat" class="w-full px-5 py-3 rounded-xl bg-gray-100 border-none focus:outline-none focus:bg-gray-200">
+    </div>
+
+    <button class="px-5 py-3 rounded-xl text-white bg-teal-800 hover:bg-teal-700">Start Chart</button>
+</form>
+<div class="mb-5 lg:w-2/4 px-4 mx-auto">
+<label class="text-white">Track Your conversation</label>
+<textarea class="w-full px-5 py-3 rounded-xl bg-gray-100 border-none focus:outline-none focus:bg-gray-200">Track Your conversation</textarea>
+</div>
+{% endblock %}

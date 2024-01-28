@@ -14,3 +14,11 @@ class Message(models.Model):
 
     class Meta:
         ordering = ('date_added',)
+
+class Messages(models.Model):
+    user_id=models.IntegerField()
+    timestamp=models.DateTimeField()
+    message_body=models.CharField(max_length=1000)
+    def __str__(self):
+        return self.message_body
+

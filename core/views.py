@@ -5,6 +5,8 @@ from .forms import SignUpForm
 
 def frontpage(request):
     return render(request, 'core/frontpage.html')
+def chat(request):
+    return render(request, 'core/chat.html')
 
 def signup(request):
     if request.method == 'POST':
