@@ -1,0 +1,14 @@
+<!-- agent_portal.html -->
+{% extends 'core/base.html' %}
+
+{% block content %}
+  <h1>Agent Portal</h1>
+  <div class="w-full flex flex-wrap items-center">
+  {% for message in messages %}
+    <div class="lg:w-2/4 px-4 mx-auto bg-white">
+      <a href="{% url 'view_message' message.user_id %}">{{ message.sender_name }} </a>
+      <div class="mb-5 text-2xl font-semibold">{{ message.message }}</div>
+    </div>
+    </div>
+  {% endfor %}
+{% endblock %}
